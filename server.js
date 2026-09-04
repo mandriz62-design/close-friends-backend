@@ -1,1 +1,3 @@
-const express=require("express");const cors=require("cors");const jwt=require("jsonwebtoken");const app=express();app.use(cors());app.use(express.json());app.post("/api/auth/login",(req,res)=>{const token=jwt.sign({email:req.body.email},"SECRET_KEY");res.json({token});});app.listen(3000,()=>console.log("Servidor ativo na porta 3000"));
+git add .
+git commit -m "Adicionar rotas JSON de auth e suporte CORS"
+git push origin main
